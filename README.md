@@ -40,14 +40,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
   Create the Domain Controller VM (Windows Server 2022) named “DC-1”:
 </p>
 <p>
-  <img src="https://i.imgur.com/gaAzjvb.png" height="75%" width="100%" alt="resource group"/>
-  <img src="https://i.imgur.com/hubTfey.png" height="75%" width="100%" alt="vm ms server"/>
+  <img src="https://i.imgur.com/yTcEZB3.jpeg" height="75%" width="100%" alt="resource group"/>
+  <img src="https://i.imgur.com/MvhlmE7.jpeg" height="75%" width="100%" alt="vm ms server"/>
 </p>
 <p>
   Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet that was created in previous step:
 </p>
 <p>
-  <img src="https://i.imgur.com/XyEmv8f.png" height="75%" width="100%" alt="vm windows"/>
+  <img src="https://i.imgur.com/gpeSud4.jpeg" height="75%" width="100%" alt="vm windows"/>
 </p>
 <p>
   Set Domain Controller’s NIC Private IP address to be static:
@@ -59,7 +59,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   Ensure that both VMs are in the same Vnet (you can check the topology with Network Watcher):
 </p>
 <p>
-  <img src="https://i.imgur.com/rFpHLdQ.png" height="75%" width="100%" alt="topology"/>
+  <img src="https://i.imgur.com/MQhcueu.jpeg" height="75%" width="100%" alt="topology"/>
 </p>
 <br />
 <br />
@@ -103,13 +103,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
   Setup a new forest as myactivedirectory.com (can be anything, just remember what it is - I ultimately did set it up as mydomain.com which you'll see in the next pic):
 </p>
 <p>
-  <img src="https://i.imgur.com/DCFUVrM.png" height="75%" width="100%" alt="set new forest"/>
+  <img src="https://i.imgur.com/edD0hvo.jpeg" height="75%" width="100%" alt="set new forest"/>
 </p>
 <p>
-  Restart and then log back into DC-1 as user: myadproject.com\labuser:
+  Restart and then log back into DC-1 as user: mydomain.com\labuser:
 </p>
 <p>
-  <img src="https://i.imgur.com/7UakWMQ.png" height="75%" width="100%" alt="fqdn login"/>
+  <img src="https://i.imgur.com/eXqEi1R.jpeg" height="75%" width="100%" alt="fqdn login"/>
 </p>
 <br />
 <br />
@@ -132,13 +132,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
   Add jane_admin to the “Domain Admins” Security Group:
 </p>
 <p>
-  <img src="https://i.imgur.com/mnLwTgq.png" height="75%" width="100%" alt="security group"/>
+  <img src="https://i.imgur.com/NYE41zO.jpeg" height="75%" width="100%" alt="security group"/>
 </p>
 <p>  
   Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”. Use jane_admin as your admin account from now on:
 </p>
 <p>
-  <img src="https://i.imgur.com/xWZ4Kol.png" height="75%" width="100%" alt="admin login"/>
+  <img src="https://i.imgur.com/KlQQ7pm.jpeg" height="75%" width="100%" alt="admin login"/>
 </p>
 <br />
 <br />
@@ -157,7 +157,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart):
 </p>
 <p>
-  <img src="https://i.imgur.com/50wszcP.png" height="75%" width="100%" alt="domain joining"/>
+  <img src="https://i.imgur.com/vMd7tLo.jpeg" height="75%" width="100%" alt="domain joining"/>
 </p>
 <p>
   Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain.
@@ -188,7 +188,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   Normally you’d want to do this with Group Policy that allows you to change MANY systems at once (maybe a future lab):
 </p>
 <p>
-  <img src="https://i.imgur.com/8BfpT3s.png" height="75%" width="100%" alt="remote desktop setup"/>
+  <img src="https://i.imgur.com/UYqek49.jpeg" height="75%" width="100%" alt="remote desktop setup"/>
 </p>
 <br />
 <br />
@@ -216,9 +216,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
   When finished, open ADUC and observe the accounts in the appropriate OU and attempt to log into Client-1 with one of the accounts (take note of the password in the script):
 </p>
 <p>
-  <img src="https://i.imgur.com/ZZCfiCp.png" height="75%" width="100%" alt="employee user accounts"/>
-  <img src="https://i.imgur.com/7gBpNzN.png" height="75%" width="100%" alt="employee user selection"/>
-  <img src="https://i.imgur.com/cqsddjn.png" height="75%" width="100%" alt="employee user login"/>
+  <img src="https://i.imgur.com/9a7SzMz.jpeg" height="75%" width="100%" alt="employee user accounts"/>
+  <img src="https://i.imgur.com/YlSHttG.jpeg" height="75%" width="100%" alt="employee user selection"/>
+  <img src="https://i.imgur.com/u4ES3iB.jpeg" height="75%" width="100%" alt="employee user login"/>
 </p>
 <br />
 <br />
